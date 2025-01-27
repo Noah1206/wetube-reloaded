@@ -1,0 +1,9 @@
+extends base
+include mixins/video.pug
+
+block content 
+    div.video_grid
+        each potato in videos
+            +video(potato)
+        else             
+            span.empty-message Not found Video

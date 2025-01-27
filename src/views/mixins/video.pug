@@ -1,0 +1,8 @@
+mixin video(video)
+    a(href=`/video/${video.id}`).video-mixin
+        div.video-mixin_thumb
+        div.video-mixin_data
+            span.video-mixin_title=video.title
+            div.video-mixin_meta
+                span #{video.owner.username} | 
+                span #{video.meta.view}회

@@ -1,0 +1,13 @@
+extends base
+include mixins/video.pug
+
+block content 
+    form(method="GET").search-form
+        input(placeholder="Search by title", type="text", name="keyword")
+        button
+            i.fas.fa-search
+    
+    each video in videos
+        +video(video)
+    else 
+        span.empty-message Not found Video
